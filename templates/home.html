@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Aviation Fleet Management - Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Aviation Fleet Management</h1>
+    <p>
+        Explore our aviation fleet management system that helps you efficiently manage aircraft, assets,
+        carbon emissions, and maintenance metrics.
+    </p>
+    <p>
+        <a href="{% url 'login' %}">Login</a> to access the system and experience the features.
+    </p>
+    <p>
+        If you are interested in a demo, click the "Book a Demo" button below:
+    </p>
+    <button>Book a Demo</button>
+    <p>
+        For more information about our products, please visit the "Products" page.
+    </p>
+    <p>
+        Contact us if you have any questions or inquiries.
+    </p>
+{% endblock %}

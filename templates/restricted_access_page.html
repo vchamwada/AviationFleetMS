@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Restricted Page</h2>
+  <p>This page is only accessible to administrators and fleet managers.</p>
+  {% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}!</p>
+    {% if user.role == 'Administrator' or user.role == 'Fleet Manager' %}
+      <p>Content for administrators and fleet managers.</p>
+    {% else %}
+      <p>You don't have permission to view this content.</p>
+    {% endif %}
+  {% else %}
+    <p>Please <a href="{% url 'login' %}">login</a> to access this page.</p>
+  {% endif %}
+{% endblock %}
